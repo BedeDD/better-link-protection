@@ -3,6 +3,10 @@
 
 """ TIMER
 
+    1.1.1
+        Now using User instead of UserName to guarantee that a user with mandarin 
+        characters are timed out too
+
     1.1.0
         Bugfixes in permission check and improved link detection and logging
 
@@ -332,8 +336,8 @@ def ContainsTld(data):
 
 # since we cannot delete a single message we need to purge for one 1s
 def PurgeUser(data):
-    Parent.SendStreamMessage("/timeout " + data.UserName + " 1s posting links without permission")
-    Parent.SendStreamMessage(ScriptSettings.blpOnLinkDetected.format(username=data.UserName))
+    Parent.SendStreamMessage("/timeout " + data.User + " 1s posting links without permission")
+    Parent.SendStreamMessage(ScriptSettings.blpOnLinkDetected.format(username=data.User))
     return
 #---------------------------------------
 # Chatbot Execute Function
