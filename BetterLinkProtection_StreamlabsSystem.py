@@ -41,7 +41,7 @@ ScriptName = "BetterLinkProtection"
 Website = "http://www.twitch.tv/lampe385"
 Description = "Improved link protection for chat."
 Creator = "Lampe385"
-Version = "1.1.0"
+Version = "1.1.1"
 
 #---------------------------------------
 # Script Variables
