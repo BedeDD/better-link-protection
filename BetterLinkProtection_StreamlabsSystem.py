@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """ TIMER
-	1.2.0
-		Bugfix in timeout command to send integer instead of string
+    1.2.0
+        Bugfix in timeout command to send integer instead of string
 
     1.1.1
         Now using User instead of UserName to guarantee that a user with mandarin 
