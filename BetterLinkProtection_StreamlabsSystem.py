@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """ TIMER
+	1.2.0
+		Bugfix in timeout command to send integer instead of string
 
     1.1.1
         Now using User instead of UserName to guarantee that a user with mandarin 
@@ -336,7 +338,7 @@ def ContainsTld(data):
 
 # since we cannot delete a single message we need to purge for one 1s
 def PurgeUser(data):
-    Parent.SendStreamMessage("/timeout " + data.User + " 1s posting links without permission")
+    Parent.SendStreamMessage("/timeout " + data.User + " 1 posting links without permission")
     Parent.SendStreamMessage(ScriptSettings.blpOnLinkDetected.format(username=data.User))
     return
 #---------------------------------------
